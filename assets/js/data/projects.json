@@ -1,0 +1,9 @@
+[
+  {
+    "title": "pipIQ",
+    "description": "An AI-powered enterprise knowledge platform that lets teams chat with their documents. Built with a tool-calling agent architecture, RAG workflows, PII protection, multi-tenant isolation, and LLM evaluation/optimization",
+    "url": "https://pipiq.com/",
+    "repo": "https://github.com/tarkdev",
+    "tags": ["Agentic AI", "Vector DB", "Haystack"]
+  }
+]
