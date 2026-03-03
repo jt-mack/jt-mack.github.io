@@ -176,7 +176,7 @@ html[data-bs-theme="light"] .gradient-text {
   }
 
   .hero-about {
-    min-height: 100vh;
+    min-height: 550px;
     /* keep or adjust */
     display: flex;
     align-items: end;
