@@ -142,6 +142,7 @@ function renderFeatured(items) {
     const description = escapeHtml(f.description || "");
     const type = (f.type || "link").toLowerCase();
     const youTubeLink= ("youtube" in f) && f["youtube"] ? f.youtube : ""
+    const image=("image" in f) && f["image"] ? f.image : ""
 
     let body = "";
     let footer = "";
@@ -168,7 +169,7 @@ function renderFeatured(items) {
         : "";
     } else {
       const url = (f.url || "").trim();
-      body = description ? `<p class="text-secondary mb-3">${description}</p>` : "";
+      body = description ? `<div><p class="text-secondary mb-3">${description}</p>${image?` <div class="ratio ratio-16x9 rounded-3 overflow-hidden mb-3"><img src=${image} class="h-100 w-100" style="object-fit: cover;" /></div>`:""}</div>` : "";
       footer = url
         ? `<a class="btn btn-sm btn-primary" href="${url}" target="_blank" rel="noreferrer">Open</a>`
         : `<span class="item-meta small">No URL provided</span>`;
