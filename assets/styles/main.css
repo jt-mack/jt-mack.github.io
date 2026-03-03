@@ -22,16 +22,14 @@ body {
 }
 
 .gradient-text {
-  background: linear-gradient(
-    90deg,
-    #1a1a1a 0%,
-    #b91c1c 45%,
-    #15803d 100%
-  );
+  background: linear-gradient(90deg,
+      #a5cbb1 0%,
+      #2f9526 45%,
+      #043c18 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  text-shadow:20px 20px 50px #fff;
+
 }
 
 .gradient-text {
@@ -40,9 +38,17 @@ body {
 }
 
 @keyframes gradientShift {
-  0% { background-position: 0% center; }
-  50% { background-position: 100% center; }
-  100% { background-position: 0% center; }
+  0% {
+    background-position: 0% center;
+  }
+
+  50% {
+    background-position: 100% center;
+  }
+
+  100% {
+    background-position: 0% center;
+  }
 }
 
 
@@ -92,6 +98,7 @@ html[data-bs-theme="light"] .tag {
 html[data-bs-theme="light"] .gradient-text {
   filter: brightness(0.9);
 }
+
 html[data-bs-theme="light"] .gradient-text {
   filter: saturate(1.1);
 }
@@ -107,7 +114,7 @@ html[data-bs-theme="light"] .gradient-text {
   content: "";
   position: absolute;
   inset: 0;
-  
+
   opacity: 0;
   transition: opacity .2s ease;
   pointer-events: none;
@@ -122,7 +129,7 @@ html[data-bs-theme="light"] .gradient-text {
 
 /* Make image act like a background on small screens */
 @media (max-width: 767.98px) {
-  
+
 
   .hero-about::before {
     opacity: 1;
@@ -136,8 +143,10 @@ html[data-bs-theme="light"] .gradient-text {
     height: 100%;
     object-fit: cover;
     z-index: 0;
-    opacity: 0.95;               /* tweak */
-    transform: scale(1.02);      /* avoids edge gaps */
+    opacity: 0.95;
+    /* tweak */
+    transform: scale(1.02);
+    /* avoids edge gaps */
   }
 
   /* remove layout influence of the image column */
@@ -153,19 +162,22 @@ html[data-bs-theme="light"] .gradient-text {
   .hero-about p,
   .hero-about a,
   .hero-about .lead {
-    color: rgba(255,255,255,.92) !important;
-    text-shadow: 0 2px 18px rgba(0,0,0,.55);
+    color: rgba(255, 255, 255, .92) !important;
+    text-shadow: 0 2px 18px rgba(0, 0, 0, .55);
   }
 
-  .hero-about .lead{
+  .hero-about .lead {
     font-size: medium;
-    text-align:center;
-  }
-  .hero-about h1{
     text-align: center;
   }
+
+  .hero-about h1 {
+    text-align: center;
+  }
+
   .hero-about {
-    min-height: 550px; /* keep or adjust */
+    min-height: 100vh;
+    /* keep or adjust */
     display: flex;
     align-items: end;
   }
@@ -182,7 +194,11 @@ html[data-bs-theme="light"] .gradient-text {
     display: flex;
     padding: 1px;
     flex-direction: column;
-    justify-content: flex-end; /* 👈 pushes text to bottom */
-    padding-bottom: 1rem;      /* space from bottom edge */
+    justify-content: flex-end;
+    /* 👈 pushes text to bottom */
+    padding-bottom: 1rem;
+    /* space from bottom edge */
   }
+
+
 }
