@@ -49,7 +49,6 @@ async function loadJson(path) {
   const root = document.documentElement;
   const btn = $("themeBtn");
   const icon = $("themeIcon");
-  const text = $("themeText");
 
   const stored = localStorage.getItem("theme") || "dark";
   root.setAttribute("data-bs-theme", stored);
@@ -58,7 +57,6 @@ async function loadJson(path) {
     const t = root.getAttribute("data-bs-theme") || "dark";
     const isLight = t === "light";
     icon.className = isLight ? `bi bi-brightness-high` : `bi bi-moon`;
-    text.textContent = isLight ? "Light" : "Dark";
     btn.classList.toggle("btn-outline-light", !isLight);
     btn.classList.toggle("btn-outline-dark", isLight);
   }
@@ -102,8 +100,8 @@ function renderProjects(items) {
       .join(" ");
 
     const buttons = [
-      href ? `<a class="btn btn-sm btn-primary" href="${href}" target="_blank" rel="noreferrer">Link</a>` : "",
-      repo ? `<a class="btn btn-sm btn-outline-secondary" href="${repo}" target="_blank" rel="noreferrer">Repo</a>` : ""
+      href ? `<a class="btn btn-sm" href="${href}" target="_blank" rel="noreferrer"><i class="bi bi-box-arrow-up-right"></i></a>` : "",
+      repo ? `<a class="btn btn-sm" href="${repo}" target="_blank" rel="noreferrer"><i class="bi bi-github"></i></a>` : ""
     ].filter(Boolean).join(" ");
 
     grid.insertAdjacentHTML(
@@ -111,9 +109,11 @@ function renderProjects(items) {
       `
       <div class="col-md-6 col-lg-4 item-card">
         <div class="card rounded-4 h-100">
-          <div class="card-body d-flex flex-column">
+          <div class="card-body d-flex flex-column h-100">
             <h3 class="h5 fw-semibold mb-2">${title}</h3>
+            <div class="flex-grow-1">
             <p class="text-secondary mb-3">${description}</p>
+            </div>
             ${tagHtml ? `<div class="d-flex flex-wrap gap-2 mb-3">${tagHtml}</div>` : `<div class="mb-2"></div>`}
             <div class="mt-auto d-flex gap-2 flex-wrap">
               ${buttons || `<span class="item-meta small">No links yet</span>`}
@@ -165,13 +165,13 @@ function renderFeatured(items) {
         body = `<div class="text-secondary small mb-3">Invalid YouTube link/id in featured.json</div>`;
       }
       footer = f.url
-        ? `<a class="btn btn-sm btn-outline-secondary" href="${f.url}" target="_blank" rel="noreferrer">${f.type === "youtube" ? "Open on YouTube":"Open"}</a>`
+        ? `<a class="btn btn-sm" href="${f.url}" target="_blank" rel="noreferrer">${f.type === "youtube" ? `<i class="bi bi-youtube"></i>`:`<i class="bi bi-box-arrow-up-right"></i>`}</a>`
         : "";
     } else {
       const url = (f.url || "").trim();
       body = description ? `<div><p class="text-secondary mb-3">${description}</p>${image?` <div class="ratio ratio-16x9 rounded-3 overflow-hidden mb-3"><img src=${image} class="h-100 w-100" style="object-fit: cover;" /></div>`:""}</div>` : "";
       footer = url
-        ? `<a class="btn btn-sm btn-primary" href="${url}" target="_blank" rel="noreferrer">Open</a>`
+        ? `<a class="btn btn-sm" href="${url}" target="_blank" rel="noreferrer"><i class="bi bi-box-arrow-up-right"></i></a>`
         : `<span class="item-meta small">No URL provided</span>`;
     }
 

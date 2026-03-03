@@ -17,15 +17,15 @@
     <nav class="navbar sticky-top navbar-blur">
         <div class="container py-2 d-flex align-items-center justify-content-between">
             <a class="navbar-brand fw-semibold m-0" href="#">Josh McCormick</a>
-            <button id="themeBtn" class="btn btn-sm btn-outline-light" type="button" aria-label="Toggle theme">
-                <span class="grid g-2" aria-hidden="true"><i id="themeIcon" class="bi bi-moon"></i></span> <span id="themeText">Dark</span>
+            <button id="themeBtn" class="btn btn-sm" type="button" aria-label="Toggle theme">
+                <i id="themeIcon" class="bi bi-moon"></i>
             </button>
         </div>
     </nav>
 
     <main class="container py-5">
         <!-- Header / About -->
-        <section class="p-4 p-md-5">
+        <section class="px-4 p-md-5">
             <div class="row g-4 align-items-center">
                 <div class="col-md-auto text-center text-md-start">
                     <img class="img-fluid" src="./assets/images/me_no_background.png" alt="Josh McCormick"
@@ -47,9 +47,10 @@
                     <div class="d-flex flex-wrap gap-3">
                         <a class="btn btn-sm" href="https://github.com/jt-mack" target="_blank" title="Github"
                             rel="noreferrer"> <i class="bi bi-github"></i></a>
-                        <a class="btn btn-sm" href="https://www.linkedin.com/in/jmccormick18/"
-                            target="_blank" rel="noreferrer" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                        <a class="btn btn-sm" href="mailto:josh.mccormick81@gmail.com" title="Email"><i class="bi bi-envelope"></i></a>
+                        <a class="btn btn-sm" href="https://www.linkedin.com/in/jmccormick18/" target="_blank"
+                            rel="noreferrer" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a class="btn btn-sm" href="mailto:josh.mccormick81@gmail.com" title="Email"><i
+                                class="bi bi-envelope"></i></a>
                     </div>
                 </div>
             </div>
@@ -76,7 +77,7 @@
                 <span class="text-secondary small">Loaded from <code>projects.json</code></span>
             </div>
 
-            <div id="projectsGrid" class="row g-4"></div>
+            <div id="projectsGrid" class="row g-4 card-group"></div>
 
             <div id="projectsEmpty" class="text-secondary small" style="display:none;">
                 No projects yet — add some to <code>projects.json</code>.

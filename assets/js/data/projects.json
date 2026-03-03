@@ -5,5 +5,12 @@
     "url": "https://pipiq.com/",
     "repo": "https://github.com/tarkdev",
     "tags": ["Agentic AI", "Vector DB", "Haystack"]
+  },
+  {
+    "title":"College Football Stats",
+    "description":"A passion project around my love of College Football. View teams, records, upcoming games, key player statistics and more..",
+    "url":"https://cfb-stats.onrender.com/",
+    "repo":"https://github.com/jt-mack/cfb_stats",
+    "tags":["React","Node","Express"]
   }
 ]

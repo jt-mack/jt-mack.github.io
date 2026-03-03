@@ -44,10 +44,6 @@ body {
   100% { background-position: 0% center; }
 }
 
-/* Card styling for rendered items */
-.item-card {
-  height: 100%;
-}
 
 .item-card .card {
   height: 100%;
