@@ -57,7 +57,7 @@ async function loadJson(path) {
   function sync() {
     const t = root.getAttribute("data-bs-theme") || "dark";
     const isLight = t === "light";
-    icon.textContent = isLight ? "☀️" : "🌙";
+    icon.className = isLight ? `bi bi-brightness-high` : `bi bi-moon`;
     text.textContent = isLight ? "Light" : "Dark";
     btn.classList.toggle("btn-outline-light", !isLight);
     btn.classList.toggle("btn-outline-dark", isLight);
