@@ -23,12 +23,12 @@
         </div>
     </nav>
 
-    <main class="container py-5">
+    <main class="container py-md-5 py-sm-0">
         <!-- Header / About -->
-        <section class="px-4 p-md-5">
+        <section class="px-4 p-md-5 hero-about">
             <div class="row g-4 align-items-center">
                 <div class="col-md-auto text-center text-md-start">
-                    <img class="img-fluid" src="./assets/images/me_no_background.png" alt="Josh McCormick"
+                    <img id="mainImage" class="img-fluid" src="./assets/images/me_no_background.png" alt="Josh McCormick"
                         onerror="this.style.display='none'; document.getElementById('avatarFallback').style.display='grid';" />
                     <div id="avatarFallback" class="avatar avatar-fallback" style="display:none;">
                         <span>JM</span>
@@ -37,14 +37,14 @@
 
                 <div class="col">
                     <h1 class="display-6 fw-semibold mb-2">
-                        Hi, I’m <span class="gradient-text">Josh</span>.
+                        Hi, I'm <span class="gradient-text">Josh</span>
                     </h1>
                     <p class="lead text-secondary mb-3" style="max-width: 65ch;">
                         Software engineer building reliable web apps, integrations, and observability tooling.
                         I like clean UX, boring infrastructure, and dashboards that tell you what to do next.
                     </p>
 
-                    <div class="d-flex flex-wrap gap-3">
+                    <div class="d-flex flex-wrap gap-3 justify-content-md-start justify-content-center">
                         <a class="btn btn-sm" href="https://github.com/jt-mack" target="_blank" title="Github"
                             rel="noreferrer"> <i class="bi bi-github"></i></a>
                         <a class="btn btn-sm" href="https://www.linkedin.com/in/jmccormick18/" target="_blank"
